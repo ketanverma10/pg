@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:background="@color/teal_700"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="120dp"
+                android:layout_height="125dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/person" />
+
+            <TextView
+                android:id="@+id/fullname_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/profile"
+                android:includeFontPadding="false"
+                android:text="@string/Fullname"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fullname_text"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="-78dp"
+                android:layout_marginTop="17dp"
+                android:layout_toEndOf="@+id/profile"
+                android:layout_toRightOf="@id/fullname_text"
+                android:includeFontPadding="false"
+                android:text="username"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="Phone no"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/PHONENO"
+            android:layout_width="348dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="@string/Phoneno"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:text="House no/flat no"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/houseno"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="House no/flat no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:ignore="InvalidId,MissingConstraints" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="Landmark"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/Landmark"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+
+            android:autofillHints=""
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="Landmark"
+            android:inputType="textCapSentences"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/village" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="Village"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/village"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="District/village"
+            android:inputType="textCapCharacters"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/houseno" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="City"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+
+
+        <EditText
+            android:id="@+id/City"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="City"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textCapSentences"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Landmark" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:text="Pincode"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/Pincode"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="Pincode"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/City" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="20dp"
+            android:text="Rent"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/rent"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+
+            android:autofillHints=""
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_security"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Rent"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pincode"
+            tools:ignore="MissingConstraints,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/update"
+            android:onClick="update_click"
+            android:layout_width="350dp"
+            android:layout_height="52dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/teal_700"
+            android:text="Update"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:cornerRadius="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</ScrollView>
