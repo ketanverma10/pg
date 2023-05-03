@@ -34,13 +34,13 @@ public class detail2 extends AppCompatActivity {
         final EditText fullname=  findViewById(R.id.FULLNAME);
         final EditText phoneno= findViewById(R.id.PHONENO);
         final EditText house= findViewById(R.id.houseno);
-        final EditText village=findViewById(R.id.village);
+
         final EditText pincode=findViewById(R.id.Pincode);
         final EditText city=findViewById(R.id.City);
         final EditText email = findViewById(R.id.inputEmail);
         final EditText password = findViewById(R.id.inputPassword);
         final EditText confpassword = findViewById(R.id.inputConfirmPassword);
-        final EditText landmark=findViewById(R.id.Landmark);
+
         final EditText rent = findViewById(R.id.rent);
 
         btn=findViewById(R.id.alreadyhaveAccount);
@@ -57,9 +57,9 @@ public class detail2 extends AppCompatActivity {
                 final String confpasswordtxt=confpassword.getText().toString();
                 final String housetxt=house.getText().toString();
                 final String citytext=city.getText().toString();
-                final String villagetxt=village.getText().toString();
+
                 final String pintxt=pincode.getText().toString();
-                final String landmarktxt=landmark.getText().toString();
+
                 final int usertype=1;
                 final String rentxt=rent.getText().toString();
                 RadioButton rb1=findViewById(R.id.yes);
@@ -67,7 +67,7 @@ public class detail2 extends AppCompatActivity {
                 RadioButton rb3=findViewById(R.id.boys);
                 RadioButton rb4=findViewById(R.id.girls);
 
-                if(fullnametxt.isEmpty()|| emailtxt.isEmpty()||phonetxt.isEmpty()||passwordtxt.isEmpty()||housetxt.isEmpty()||pintxt.isEmpty()||villagetxt.isEmpty()||citytext.isEmpty()||landmarktxt.isEmpty()){
+                if(fullnametxt.isEmpty()|| emailtxt.isEmpty()||phonetxt.isEmpty()||passwordtxt.isEmpty()||housetxt.isEmpty()||pintxt.isEmpty()||citytext.isEmpty()){
                     Toast.makeText(detail2.this, "please fill all fields", Toast.LENGTH_SHORT).show();
                 }
                 else if (!passwordtxt.equals(confpasswordtxt)){
@@ -85,13 +85,13 @@ public class detail2 extends AppCompatActivity {
                             }
                             else {
                                 databaseReference.child("users").child(emailtxt).child("fullname").setValue(fullnametxt);
-                                databaseReference.child("users").child(emailtxt).child("houseno").setValue(housetxt);
+                                databaseReference.child("users").child(emailtxt).child("address").setValue(housetxt);
                                 databaseReference.child("users").child(emailtxt).child("phoneno").setValue(phonetxt);
-                                databaseReference.child("users").child(emailtxt).child("village").setValue(villagetxt.toUpperCase());
+
                                 databaseReference.child("users").child(emailtxt).child("city").setValue(citytext.toUpperCase());
                                 databaseReference.child("users").child(emailtxt).child("pincode").setValue(pintxt);
                                 databaseReference.child("users").child(emailtxt).child("password").setValue(passwordtxt);
-                                databaseReference.child("users").child(emailtxt).child("landmark").setValue(landmarktxt);
+
                                 databaseReference.child("users").child(emailtxt).child("usertype").setValue(usertype);
                                 databaseReference.child("users").child(emailtxt).child("rent").setValue(rentxt);
 

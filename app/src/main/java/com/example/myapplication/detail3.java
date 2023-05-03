@@ -33,10 +33,9 @@ public class detail3 extends AppCompatActivity {
         final EditText fullname=  findViewById(R.id.FULLNAME);
         final EditText phoneno= findViewById(R.id.PHONENO);
         final EditText house= findViewById(R.id.houseno);
-        final EditText village=findViewById(R.id.village);
         final EditText pincode=findViewById(R.id.Pincode);
         final EditText city=findViewById(R.id.City);
-        final EditText landmark=findViewById(R.id.Landmark);
+
         final EditText email = findViewById(R.id.inputEmail);
         final EditText password = findViewById(R.id.inputPassword);
         final EditText confpassword = findViewById(R.id.inputConfirmPassword);
@@ -55,13 +54,13 @@ public class detail3 extends AppCompatActivity {
                 final String confpasswordtxt=confpassword.getText().toString();
                 final String housetxt=house.getText().toString();
                 final String citytext=city.getText().toString();
-                final String villagetxt=village.getText().toString();
+
                 final String pintxt=pincode.getText().toString();
-                final String landmarktxt=landmark.getText().toString();
+
                 final int usertype=2;
                 final String feestxt=fees.getText().toString();
 
-                if(fullnametxt.isEmpty()|| emailtxt.isEmpty()||phonetxt.isEmpty()||passwordtxt.isEmpty()||housetxt.isEmpty()||pintxt.isEmpty()||villagetxt.isEmpty()||citytext.isEmpty()||landmarktxt.isEmpty()||feestxt.isEmpty()){
+                if(fullnametxt.isEmpty()|| emailtxt.isEmpty()||phonetxt.isEmpty()||passwordtxt.isEmpty()||housetxt.isEmpty()||pintxt.isEmpty()||citytext.isEmpty()||feestxt.isEmpty()){
                     Toast.makeText(detail3.this, "please fill all fields", Toast.LENGTH_SHORT).show();
                 }
                 else if (!passwordtxt.equals(confpasswordtxt)){
@@ -80,13 +79,13 @@ public class detail3 extends AppCompatActivity {
                             else {
 
                                 databaseReference.child("users").child(emailtxt).child("fullname").setValue(fullnametxt);
-                                databaseReference.child("users").child(emailtxt).child("houseno").setValue(housetxt);
+                                databaseReference.child("users").child(emailtxt).child("address").setValue(housetxt);
                                 databaseReference.child("users").child(emailtxt).child("phoneno").setValue(phonetxt);
-                                databaseReference.child("users").child(emailtxt).child("village").setValue(villagetxt.toUpperCase());
+
                                 databaseReference.child("users").child(emailtxt).child("city").setValue(citytext.toUpperCase());
                                 databaseReference.child("users").child(emailtxt).child("pincode").setValue(pintxt);
                                 databaseReference.child("users").child(emailtxt).child("password").setValue(passwordtxt);
-                                databaseReference.child("users").child(emailtxt).child("landmark").setValue(landmarktxt);
+
                                 databaseReference.child("users").child(emailtxt).child("usertype").setValue(usertype);
                                 databaseReference.child("users").child(emailtxt).child("fees").setValue(feestxt);
 

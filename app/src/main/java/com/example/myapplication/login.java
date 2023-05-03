@@ -47,8 +47,16 @@ public class login extends AppCompatActivity {
                                 final int ut=snapshot.child(emailtxt).child("usertype").getValue(Integer.class);
                                 if(getpasswoed.equals(passwordtxt)){
                                     if(ut==0){
-                                        Toast.makeText(login.this, "successfully logged in", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(login.this, MainActivity.class));
+                                        String usern=emailtxt;
+                                        int us=snapshot.child(emailtxt).child("usertype").getValue(Integer.class);
+                                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                        intent.putExtra("username",usern);
+                                        intent.putExtra("utype",us);
+                                        startActivity(intent);
+                                        finish();
+
+//                                        Toast.makeText(login.this, "successfully logged in", Toast.LENGTH_SHORT).show();
+//                                        startActivity(new Intent(login.this, MainActivity.class));
                                     } else if (ut==1) {
                                         String usern=emailtxt;
                                         String name=snapshot.child(emailtxt).child("fullname").getValue(String.class);

@@ -99,7 +99,7 @@
             android:drawableStart="@drawable/ic_person"
             android:drawablePadding="15dp"
             android:ems="10"
-            android:hint="House no/flat no"
+            android:hint="@string/Address"
             android:inputType="text"
             android:minHeight="48dp"
             android:paddingStart="20dp"
@@ -113,54 +113,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PHONENO"
             tools:ignore="InvalidId,MissingConstraints" />
-
-        <EditText
-            android:id="@+id/village"
-            android:layout_width="350dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
-            android:autofillHints=""
-            android:background="@drawable/input_bg"
-            android:drawableStart="@drawable/ic_person"
-            android:drawablePadding="15dp"
-            android:ems="10"
-            android:hint="District/village"
-            android:inputType="textCapCharacters"
-            android:minHeight="48dp"
-            android:paddingStart="20dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/houseno" />
-
-        <EditText
-            android:id="@+id/Landmark"
-            android:layout_width="350dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
-            android:autofillHints=""
-            android:background="@drawable/input_bg"
-            android:drawableStart="@drawable/ic_person"
-            android:drawablePadding="15dp"
-            android:ems="10"
-            android:hint="Landmark"
-            android:inputType="textCapSentences"
-            android:minHeight="48dp"
-            android:paddingStart="20dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/village" />
 
         <EditText
             android:id="@+id/City"
@@ -182,9 +134,9 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Landmark" />
+            app:layout_constraintTop_toBottomOf="@+id/houseno" />
 
         <EditText
             android:id="@+id/Pincode"
