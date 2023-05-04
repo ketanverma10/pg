@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".carpool"
+            android:exported="false" />
+        <activity
             android:name=".s1"
             android:exported="false" />
         <activity

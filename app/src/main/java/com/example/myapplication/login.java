@@ -62,9 +62,8 @@ public class login extends AppCompatActivity {
                                         String name=snapshot.child(emailtxt).child("fullname").getValue(String.class);
                                         String phone=snapshot.child(emailtxt).child("phoneno").getValue(String.class);
                                         String r=snapshot.child(emailtxt).child("rent").getValue(String.class);
-                                        String hno=snapshot.child(emailtxt).child("houseno").getValue(String.class);
-                                        String lmark=snapshot.child(emailtxt).child("landmark").getValue(String.class);
-                                        String vil=snapshot.child(emailtxt).child("village").getValue(String.class);
+                                        String hno=snapshot.child(emailtxt).child("address").getValue(String.class);
+
                                         String c=snapshot.child(emailtxt).child("city").getValue(String.class);
                                         String f=snapshot.child(emailtxt).child("pg for").getValue(String.class);
                                         String pin=snapshot.child(emailtxt).child("pincode").getValue(String.class);
@@ -73,9 +72,8 @@ public class login extends AppCompatActivity {
                                         intent.putExtra("name",name);
                                         intent.putExtra("phoneno",phone);
                                         intent.putExtra("username",usern);
-                                        intent.putExtra("houseno",hno);
-                                        intent.putExtra("landmark",lmark);
-                                        intent.putExtra("village",vil);
+                                        intent.putExtra("address",hno);
+
                                         intent.putExtra("city",c);
                                         intent.putExtra("pincode",pin);
                                         intent.putExtra("pg for",f);
@@ -95,9 +93,8 @@ public class login extends AppCompatActivity {
                                         String name=snapshot.child(emailtxt).child("fullname").getValue(String.class);
                                         String phone=snapshot.child(emailtxt).child("phoneno").getValue(String.class);
                                         String f=snapshot.child(emailtxt).child("fees").getValue(String.class);
-                                        String hno=snapshot.child(emailtxt).child("houseno").getValue(String.class);
-                                        String lmark=snapshot.child(emailtxt).child("landmark").getValue(String.class);
-                                        String vil=snapshot.child(emailtxt).child("village").getValue(String.class);
+                                        String hno=snapshot.child(emailtxt).child("addreess").getValue(String.class);
+
                                         String c=snapshot.child(emailtxt).child("city").getValue(String.class);
                                         String pin=snapshot.child(emailtxt).child("pincode").getValue(String.class);
                                         Intent intent = new Intent(getApplicationContext(),home2.class);
@@ -105,9 +102,8 @@ public class login extends AppCompatActivity {
                                         intent.putExtra("name",name);
                                         intent.putExtra("phoneno",phone);
                                         intent.putExtra("username",usern);
-                                        intent.putExtra("houseno",hno);
-                                        intent.putExtra("landmark",lmark);
-                                        intent.putExtra("village",vil);
+                                        intent.putExtra("address",hno);
+
                                         intent.putExtra("city",c);
                                         intent.putExtra("pincode",pin);
                                         intent.putExtra("fees",f);

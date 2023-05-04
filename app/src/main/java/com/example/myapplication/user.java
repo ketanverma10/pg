@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 public class user {
     String fullname,phoneno,address,city,pincode,gender,tiffinservice,rent,pgfor;
+            int usertype;
 
     public user(String fullname, String phoneno, String address, String city, String pincode, String gender, String tiffinservice, String rent, String pgfor) {
         this.fullname = fullname;
@@ -13,6 +14,10 @@ public class user {
         this.tiffinservice = tiffinservice;
         this.rent = rent;
         this.pgfor = pgfor;
+    }
+
+    public int getUsertype() {
+        return usertype;
     }
 
     public user() {

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,8 +29,10 @@ public class search extends AppCompatActivity {
     EditText search;
 
     Button btn;
+    
 
 
+    @SuppressLint("SuspiciousIndentation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +44,8 @@ public class search extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list=new ArrayList<>();
-        myadapter=new Myadapter(this,list);
-        recyclerView.setAdapter(myadapter);
+        list=new ArrayList<user>();
+
 
 
 
@@ -54,9 +56,15 @@ public class search extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+
+
                         for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                             user user = dataSnapshot.getValue(user.class);
-                            list.add(user);
+                            if(user.getUsertype()==1) {
+                                System.out.println("hello");
+
+                                list.add(user);
+                            }
 
 
 
@@ -73,7 +81,8 @@ public class search extends AppCompatActivity {
 
                     }
                 });
-
+                myadapter=new Myadapter(this,list);
+        recyclerView.setAdapter(myadapter);
 
 
 
