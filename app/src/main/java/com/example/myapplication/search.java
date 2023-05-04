@@ -34,11 +34,10 @@ public class search extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        search=findViewById(R.id.search);
 
         recyclerView=findViewById(R.id.recyclerView);
-        btn=findViewById(R.id.btnsearch);
-        database= FirebaseDatabase.getInstance().getReferenceFromUrl("https://pggg-fe0d3-default-rtdb.firebaseio.com");
+
+        database= FirebaseDatabase.getInstance().getReference("users");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

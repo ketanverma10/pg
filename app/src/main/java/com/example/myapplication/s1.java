@@ -1,29 +1,26 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-    CardView btn1;
-    CardView btn2;
-    CardView btn3;
+public class s1 extends AppCompatActivity {
+
+    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btn1=findViewById(R.id.cardView);
-
+        setContentView(R.layout.activity_s1);
+        btn1=findViewById(R.id.btnsearch);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,s1.class));
+                startActivity(new Intent(s1.this,search.class));
             }
         });
-
     }
 }

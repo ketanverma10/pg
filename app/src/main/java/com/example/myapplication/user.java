@@ -3,12 +3,23 @@ package com.example.myapplication;
 public class user {
     String fullname,phoneno,address,city,pincode,gender,tiffinservice,rent,pgfor;
 
-    public String getFullname() {
-        return fullname;
+    public user(String fullname, String phoneno, String address, String city, String pincode, String gender, String tiffinservice, String rent, String pgfor) {
+        this.fullname = fullname;
+        this.phoneno = phoneno;
+        this.address = address;
+        this.city = city;
+        this.pincode = pincode;
+        this.gender = gender;
+        this.tiffinservice = tiffinservice;
+        this.rent = rent;
+        this.pgfor = pgfor;
     }
 
-    public String getPgfor() {
-        return pgfor;
+    public user() {
+    }
+
+    public String getFullname() {
+        return fullname;
     }
 
     public String getPhoneno() {
@@ -37,5 +48,9 @@ public class user {
 
     public String getRent() {
         return rent;
+    }
+
+    public String getPgfor() {
+        return pgfor;
     }
 }

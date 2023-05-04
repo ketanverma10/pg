@@ -54,8 +54,8 @@ public class detail1 extends AppCompatActivity {
                 final int usertype=0;
 
                 RadioButton rb = findViewById(R.id.radioButton);
-                RadioButton rb1 = findViewById(R.id.radioButton);
-                RadioButton rb2= findViewById(R.id.radioButton);
+                RadioButton rb1 = findViewById(R.id.radioButton2);
+                RadioButton rb2= findViewById(R.id.radioButton3);
 
                 if(fullnametxt.isEmpty()|| emailtxt.isEmpty()||phonetxt.isEmpty()||passwordtxt.isEmpty()){
                     Toast.makeText(detail1.this, "please fill all fields", Toast.LENGTH_SHORT).show();
