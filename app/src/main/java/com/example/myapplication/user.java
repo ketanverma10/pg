@@ -1,16 +1,16 @@
 package com.example.myapplication;
 
 public class user {
-    String fullname,phoneno,address,city,pincode,gender,tiffinservice,rent,pgfor;
+    String fullname,phoneno,address,city,pincode,tiffinservice,rent,pgfor;
             int usertype;
 
-    public user(String fullname, String phoneno, String address, String city, String pincode, String gender, String tiffinservice, String rent, String pgfor) {
+    public user(String fullname, String phoneno, String address, String city, String pincode, String tiffinservice, String rent, String pgfor) {
         this.fullname = fullname;
         this.phoneno = phoneno;
         this.address = address;
         this.city = city;
         this.pincode = pincode;
-        this.gender = gender;
+
         this.tiffinservice = tiffinservice;
         this.rent = rent;
         this.pgfor = pgfor;
@@ -43,9 +43,7 @@ public class user {
         return pincode;
     }
 
-    public String getGender() {
-        return gender;
-    }
+
 
     public String getTiffinservice() {
         return tiffinservice;

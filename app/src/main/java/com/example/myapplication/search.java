@@ -26,7 +26,7 @@ public class search extends AppCompatActivity {
     Myadapter myadapter;
     ArrayList<user> list;
 
-    EditText search;
+
 
     Button btn;
     
@@ -62,6 +62,8 @@ public class search extends AppCompatActivity {
                             user user = dataSnapshot.getValue(user.class);
                             if(user.getUsertype()==1) {
                                 System.out.println("hello");
+                                System.out.println(user.getPgfor());
+
 
                                 list.add(user);
                             }

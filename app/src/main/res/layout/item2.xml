@@ -7,6 +7,7 @@
     app:cardCornerRadius="8dp"
     android:layout_margin="16dp">
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -135,29 +136,9 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PG FOR"
-                android:textColor="@color/teal_700"
-                android:textSize="26sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/pgfor12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="Boys"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -168,31 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tiffin Service"
-                android:textColor="@color/teal_700"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tiffinservice12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="yes"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rent"
+                android:text="fees"
                 android:textColor="@color/teal_700"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -209,7 +166,5 @@
 
 
     </LinearLayout>
-
-
 
 </androidx.cardview.widget.CardView>

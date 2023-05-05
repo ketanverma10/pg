@@ -23,10 +23,17 @@ public class MainActivity extends AppCompatActivity {
         btn1=findViewById(R.id.cardView);
         bt1=findViewById(R.id.Logout);
         btn3=findViewById(R.id.cardView3);
+        btn2=findViewById(R.id.cardView2);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,s1.class));
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,s2.class));
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
