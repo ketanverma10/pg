@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,8 @@ public class search extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list=new ArrayList<user>();
+        Intent intent=getIntent();
+
 
 
 
@@ -55,14 +58,17 @@ public class search extends AppCompatActivity {
 
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String search_txt=intent.getStringExtra("search");
+
 
 
 
                         for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                             user user = dataSnapshot.getValue(user.class);
-                            if(user.getUsertype()==1) {
+                            if(user.getUsertype()==1 && user.getCity().equals(search_txt.toUpperCase())) {
+
                                 System.out.println("hello");
-                                System.out.println(user.getPgfor());
+                                System.out.println(search_txt);
 
 
                                 list.add(user);

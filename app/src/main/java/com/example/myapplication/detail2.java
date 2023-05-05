@@ -96,16 +96,16 @@ public class detail2 extends AppCompatActivity {
                                 databaseReference.child("users").child(emailtxt).child("rent").setValue(rentxt);
 
                                 if(rb3.isChecked()){
-                                    databaseReference.child("users").child(emailtxt).child("tiffin  service").setValue(rb1.getText().toString());
+                                    databaseReference.child("users").child(emailtxt).child("tiffinservice").setValue(rb1.getText().toString());
                                 }
                                 else if(rb4.isChecked()){
-                                    databaseReference.child("users").child(emailtxt).child("tiffin service").setValue(rb2.getText().toString());
+                                    databaseReference.child("users").child(emailtxt).child("tiffinservice").setValue(rb2.getText().toString());
                                 }
                                 if(rb1.isChecked()){
-                                    databaseReference.child("users").child(emailtxt).child("pg for").setValue(rb3.getText().toString());
+                                    databaseReference.child("users").child(emailtxt).child("pgfor").setValue(rb3.getText().toString());
                                 }
                                 else if (rb2.isChecked()){
-                                    databaseReference.child("users").child(emailtxt).child("pg for").setValue(rb4.getText().toString());
+                                    databaseReference.child("users").child(emailtxt).child("pgfor").setValue(rb4.getText().toString());
                                 }
                                 Toast.makeText(detail2.this, "USER REGISTERED SUCCESSFULLY", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(detail2.this,login.class));

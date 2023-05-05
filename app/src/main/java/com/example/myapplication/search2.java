@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +22,7 @@ public class search2 extends AppCompatActivity {
     DatabaseReference database;
     Myadapter2 myadapter2;
     ArrayList<user2> list;
+    Intent intent=getIntent();
 
 
     @Override
@@ -40,12 +42,13 @@ public class search2 extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String search_txt=intent.getStringExtra("search");
 
 
 
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     user2 user2 = dataSnapshot.getValue(user2.class);
-                    if(user2.getUsertype()==2) {
+                    if(user2.getUsertype()==2 && user2.getCity().equals(search_txt.toUpperCase())) {
                         System.out.println("hello");
 
 
