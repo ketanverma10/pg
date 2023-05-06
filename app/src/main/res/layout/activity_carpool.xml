@@ -10,7 +10,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Coming soon"
+        android:text="Coming   soon"
         android:textSize="40dp"
         android:textColor="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
