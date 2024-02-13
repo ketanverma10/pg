@@ -184,66 +184,79 @@
 
             app:layout_constraintTop_toBottomOf="@+id/Pincode" />
 
-        <RadioButton
-            android:id="@+id/boys"
-            android:layout_width="93dp"
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="425dp"
             android:layout_height="58dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="52dp"
-            android:text="Boys"
-            android:textColor="@color/teal_700"
-            app:layout_constraintEnd_toStartOf="@+id/girls"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Pincode" />
-
-        <RadioButton
-            android:id="@+id/girls"
-            android:layout_width="93dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="48dp"
-            android:text="Girls"
-            android:textColor="@color/teal_700"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Pincode" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pincode">
+
+
+            <RadioButton
+                android:id="@+id/boys"
+                android:layout_width="93dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="50dp"
+                android:text="Boys"
+                android:textColor="@color/teal_700" />
+
+            <RadioButton
+                android:id="@+id/girls"
+                android:layout_width="93dp"
+                android:layout_height="58dp"
+
+                android:layout_marginLeft="120dp"
+                android:text="Girls"
+                android:textColor="@color/teal_700" />
+        </RadioGroup>
 
         <TextView
             android:id="@+id/doypu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="140dp"
             android:text="Do you provide tiffin service"
             android:textColor="@color/teal_700"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.185"
+            app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Pincode"
             tools:ignore="MissingConstraints" />
 
-        <RadioButton
-            android:id="@+id/yes"
-            android:layout_width="100dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="20dp"
-            android:text="Yes"
-            android:textColor="@color/teal_700"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doypu" />
-
-        <RadioButton
-            android:id="@+id/no"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="48dp"
-            android:text="No"
-            android:textColor="@color/teal_700"
+        <RadioGroup
+            android:layout_width="425dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doypu" />
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doypu">
+
+            <RadioButton
+                android:id="@+id/yes"
+                android:layout_width="100dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="50dp"
+                android:text="Yes"
+                android:textColor="@color/teal_700" />
+
+            <RadioButton
+                android:id="@+id/no"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="120dp"
+                android:text="No"
+                android:textColor="@color/teal_700"
+
+                />
+
+        </RadioGroup>
 
         <EditText
             android:id="@+id/inputEmail"
@@ -324,7 +337,7 @@
             android:id="@+id/rent"
             android:layout_width="350dp"
             android:layout_height="52dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="284dp"
             android:autofillHints=""
             android:background="@drawable/input_bg"
             android:drawableStart="@drawable/baseline_attach_money_24"
@@ -340,7 +353,7 @@
             android:textColor="@color/colorBlack"
             android:textColorHint="@color/colorBlack"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.474"
+            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Pincode"
             tools:ignore="MissingConstraints,TextContrastCheck" />
@@ -377,6 +390,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnRegister"
             tools:ignore="TextContrastCheck" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

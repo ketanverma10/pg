@@ -96,42 +96,7 @@
         app:layout_constraintTop_toBottomOf="@+id/PHONENO"
         tools:ignore="MissingConstraints" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="93dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Male"
-        android:textColor="@color/teal_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
-        tools:ignore="MissingConstraints" />
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="93dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/Female"
-        android:textColor="@color/teal_700"
-        app:layout_constraintStart_toEndOf="@+id/radioButton"
-        app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
-        tools:ignore="MissingConstraints" />
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="93dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="16dp"
-        android:text="Others"
-        android:textColor="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.255"
-        app:layout_constraintStart_toEndOf="@+id/radioButton2"
-        app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
-        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -143,7 +108,7 @@
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="15dp"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/username"
         android:inputType="textPersonName|textEmailAddress"
         android:minHeight="48dp"
         android:paddingStart="20dp"
@@ -249,8 +214,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
+        android:orientation="horizontal"
 
 
 
-        />
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Male"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="93dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Female"
+            android:textColor="@color/teal_700"
+            app:layout_constraintStart_toEndOf="@+id/radioButton"
+            app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="93dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="16dp"
+            android:text="Others"
+            android:textColor="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.255"
+            app:layout_constraintStart_toEndOf="@+id/radioButton2"
+            app:layout_constraintTop_toBottomOf="@+id/ADDRESS"
+            tools:ignore="MissingConstraints" /></RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
